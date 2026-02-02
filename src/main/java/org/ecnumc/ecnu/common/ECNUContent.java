@@ -4,6 +4,7 @@ import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.ecnumc.ecnu.common.registries.ECNUBlocks;
 import org.ecnumc.ecnu.common.registries.ECNUCreativeModeTabs;
 import org.ecnumc.ecnu.common.registries.ECNUEntityTypes;
 import org.ecnumc.ecnu.common.registries.ECNUItems;
@@ -22,6 +23,7 @@ public final class ECNUContent {
 	 */
 	public static void modConstruction(IEventBus modBus) {
 		ECNUEntityTypes.init(modBus);
+		ECNUBlocks.init(modBus);
 		ECNUItems.init(modBus);
 		ECNUCreativeModeTabs.init(modBus);
 	}

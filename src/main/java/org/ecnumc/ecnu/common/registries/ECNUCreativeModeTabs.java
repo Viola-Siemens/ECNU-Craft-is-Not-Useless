@@ -5,7 +5,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,8 +22,11 @@ public final class ECNUCreativeModeTabs {
 			"main", () -> CreativeModeTab.builder()
 					.withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
 					.title(Component.translatable("itemGroup.ecnu"))
-					.icon(() -> new ItemStack(Items.GRASS_BLOCK))
-					.displayItems((flags, output) -> {})
+					.icon(() -> new ItemStack(ECNUItems.SHANGHAI_CABBAGE.get()))
+					.displayItems((flags, output) -> {
+						output.accept(ECNUItems.AGGLOMERATED_STONE.get());
+						output.accept(ECNUItems.SHANGHAI_CABBAGE.get());
+					})
 					.build()
 	);
 

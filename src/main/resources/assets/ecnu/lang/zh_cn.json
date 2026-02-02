@@ -2,5 +2,8 @@
   "language": "Chinese",
   "language.code": "zh_cn",
   "language.region": "China",
-  "itemGroup.ecnu": "水杉工艺"
+  "itemGroup.ecnu": "水杉工艺",
+
+  "block.ecnu.agglomerated_stone": "人造石",
+  "item.ecnu.shanghai_cabbage": "上海青"
 }

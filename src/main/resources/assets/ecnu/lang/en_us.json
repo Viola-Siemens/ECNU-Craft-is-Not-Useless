@@ -2,5 +2,8 @@
   "language": "English",
   "language.code": "en_us",
   "language.region": "United States",
-  "itemGroup.ecnu": "ECNU Craft is Not Useless"
+  "itemGroup.ecnu": "ECNU Craft is Not Useless",
+
+  "block.ecnu.agglomerated_stone": "Agglomerated Stone",
+  "item.ecnu.shanghai_cabbage": "Shanghai Cabbage"
 }
