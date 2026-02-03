@@ -10,6 +10,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static org.ecnumc.ecnu.ECNUForge.MODID;
 
+/**
+ * Mod Blocks
+ * @author liudongyu
+ */
 public final class ECNUBlocks {
 	private static final DeferredRegister<Block> REGISTER = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
