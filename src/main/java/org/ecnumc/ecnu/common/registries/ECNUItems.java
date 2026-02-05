@@ -39,9 +39,6 @@ public final class ECNUItems {
 	public static final RegistryObject<Item> CORN = REGISTER.register("corn", () -> new Item(
 			new Item.Properties().food(ECNUFoods.CORN)
 	));
-	public static final RegistryObject<Item> MINCED_MEAT = REGISTER.register("minced_meat", () -> new Item(
-			new Item.Properties().food(ECNUFoods.MINCED_MEAT)
-	));
 	public static final RegistryObject<Item> CELERY = REGISTER.register("celery", () -> new Item(
 			new Item.Properties().food(ECNUFoods.CELERY)
 	));

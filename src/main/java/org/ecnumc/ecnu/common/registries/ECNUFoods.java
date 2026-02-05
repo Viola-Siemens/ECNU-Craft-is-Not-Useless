@@ -38,11 +38,6 @@ public final class ECNUFoods {
 			.saturationMod(0.4F)
 			.build();
 
-	public static final FoodProperties MINCED_MEAT = new FoodProperties.Builder()
-			.nutrition(2)
-			.saturationMod(0.3F)
-			.build();
-
 	public static final FoodProperties CELERY = new FoodProperties.Builder()
 			.nutrition(1)
 			.saturationMod(0.2F)
