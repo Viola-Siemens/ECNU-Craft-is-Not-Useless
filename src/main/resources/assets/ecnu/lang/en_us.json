@@ -5,11 +5,15 @@
   "itemGroup.ecnu": "ECNU Craft is Not Useless",
 
   "block.ecnu.agglomerated_stone": "Agglomerated Stone",
+  "block.ecnu.shanghai_cabbage": "Shanghai Cabbage",
   "item.ecnu.shanghai_cabbage": "Shanghai Cabbage",
+  "item.ecnu.shanghai_cabbage_seeds": "Shanghai Cabbage Seeds",
   "item.ecnu.fried_corn_with_grapes": "Fried Corn with Grapes",
   "item.ecnu.emerald_chicken_drumstick": "Emerald Chicken Drumstick",
   "item.ecnu.dough": "Dough",
   "item.ecnu.grape": "Grape",
   "item.ecnu.corn": "Corn",
-  "item.ecnu.celery": "Celery"
+  "item.ecnu.celery": "Celery",
+
+  "entity.ecnu.haibao": "Haibao"
 }

@@ -5,11 +5,15 @@
   "itemGroup.ecnu": "水杉工艺",
 
   "block.ecnu.agglomerated_stone": "人造石",
+  "block.ecnu.shanghai_cabbage": "上海青",
   "item.ecnu.shanghai_cabbage": "上海青",
+  "item.ecnu.shanghai_cabbage_seeds": "上海青种子",
   "item.ecnu.fried_corn_with_grapes": "葡萄炒玉米",
   "item.ecnu.emerald_chicken_drumstick": "翡翠鸡腿",
   "item.ecnu.dough": "面团",
   "item.ecnu.grape": "葡萄",
   "item.ecnu.corn": "玉米",
-  "item.ecnu.celery": "芹菜"
+  "item.ecnu.celery": "芹菜",
+
+  "entity.ecnu.haibao": "海宝"
 }

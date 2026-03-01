@@ -2,6 +2,7 @@ package org.ecnumc.ecnu.common.registries;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,6 +24,10 @@ public final class ECNUItems {
 	));
 	public static final RegistryObject<Item> SHANGHAI_CABBAGE = REGISTER.register("shanghai_cabbage", () -> new Item(
 			new Item.Properties().food(ECNUFoods.SHANGHAI_CABBAGE)
+	));
+	public static final RegistryObject<ItemNameBlockItem> SHANGHAI_CABBAGE_SEEDS = REGISTER.register("shanghai_cabbage_seeds", () -> new ItemNameBlockItem(
+			ECNUBlocks.SHANGHAI_CABBAGE.get(),
+			new Item.Properties()
 	));
 	public static final RegistryObject<Item> FRIED_CORN_WITH_GRAPES = REGISTER.register("fried_corn_with_grapes", () -> new Item(
 			new Item.Properties().food(ECNUFoods.FRIED_CORN_WITH_GRAPES).craftRemainder(Items.BOWL)

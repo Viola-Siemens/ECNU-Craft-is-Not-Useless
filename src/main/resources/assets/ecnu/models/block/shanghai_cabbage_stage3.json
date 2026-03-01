@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "cutout",
+  "textures": {
+    "cross": "ecnu:block/shanghai_cabbage_3"
+  }
+}
