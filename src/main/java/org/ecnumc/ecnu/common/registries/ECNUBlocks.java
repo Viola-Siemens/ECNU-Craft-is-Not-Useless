@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.ecnumc.ecnu.common.blocks.DeskBlock;
 import org.ecnumc.ecnu.common.blocks.ShanghaiCabbageBlock;
 
 import static org.ecnumc.ecnu.ECNUForge.MODID;
@@ -26,6 +27,12 @@ public final class ECNUBlocks {
 	public static final RegistryObject<ShanghaiCabbageBlock> SHANGHAI_CABBAGE = REGISTER.register(
 			"shanghai_cabbage", () -> new ShanghaiCabbageBlock(
 					BlockBehaviour.Properties.of().instabreak().noCollission().randomTicks().sound(SoundType.CROP)
+			)
+	);
+
+	public static final RegistryObject<DeskBlock> DESK = REGISTER.register(
+			"desk", () -> new DeskBlock(
+					BlockBehaviour.Properties.of().strength(2.0F).sound(SoundType.WOOD)
 			)
 	);
 

@@ -1,12 +1,16 @@
 package org.ecnumc.ecnu.client;
 
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import org.ecnumc.ecnu.client.models.HaibaoModel;
 import org.ecnumc.ecnu.client.renderers.HaibaoRenderer;
+import org.ecnumc.ecnu.client.screens.DeskScreen;
 import org.ecnumc.ecnu.common.registries.ECNUEntityTypes;
+import org.ecnumc.ecnu.common.registries.ECNUMenuTypes;
 
 import static org.ecnumc.ecnu.ECNUForge.MODID;
 
@@ -16,6 +20,11 @@ import static org.ecnumc.ecnu.ECNUForge.MODID;
  */
 @Mod.EventBusSubscriber(modid = MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ECNUForgeClient {
+	@SubscribeEvent
+	public static void onClientSetup(FMLClientSetupEvent event) {
+		event.enqueueWork(ECNUForgeClient::onRegisterMenuScreens);
+	}
+
 	/**
 	 * Register layer definitions for mod entities.
 	 * @param event	register layer definitions event
@@ -32,6 +41,10 @@ public final class ECNUForgeClient {
 	@SubscribeEvent
 	public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(ECNUEntityTypes.HAIBAO.get(), HaibaoRenderer::new);
+	}
+
+	public static void onRegisterMenuScreens() {
+		MenuScreens.register(ECNUMenuTypes.DESK.get(), DeskScreen::new);
 	}
 
 	private ECNUForgeClient() {
