@@ -48,6 +48,11 @@ public final class ECNUItems {
 			new Item.Properties().food(ECNUFoods.CELERY)
 	));
 
+	public static final RegistryObject<BlockItem> DESK = REGISTER.register("desk", () -> new BlockItem(
+			ECNUBlocks.DESK.get(),
+			new Item.Properties()
+	));
+
 	private ECNUItems() {
 	}
 

@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "emeraldcraft"
+    }
+  ],
+  "type": "emeraldcraft:carpentry",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    }
+  ],
+  "result": "ecnu:desk",
+  "count": 1
+}

@@ -19,6 +19,8 @@ public final class ECNUContent {
 	 * @param modBus	the mod bus
 	 */
 	public static void modConstruction(IEventBus modBus) {
+		ECNUEnchantmentCategories.init();
+		ECNUEnchantments.init(modBus);
 		ECNUEntityTypes.init(modBus);
 		ECNUBlocks.init(modBus);
 		ECNUItems.init(modBus);

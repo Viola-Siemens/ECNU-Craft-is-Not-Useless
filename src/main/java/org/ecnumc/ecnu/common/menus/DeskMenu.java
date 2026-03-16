@@ -8,6 +8,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import org.ecnumc.ecnu.common.blocks.entities.DeskBlockEntity;
+import org.ecnumc.ecnu.common.menus.slot.DeskSlot;
 import org.ecnumc.ecnu.common.registries.ECNUMenuTypes;
 
 public class DeskMenu extends AbstractContainerMenu {
@@ -22,8 +23,8 @@ public class DeskMenu extends AbstractContainerMenu {
 		checkContainerSize(container, DeskBlockEntity.SLOT_BOOK);
 		this.desk = container;
 
-		this.addSlot(new Slot(container, 0, 44, 36));
-		this.addSlot(new Slot(container, 1, 62, 36));
+		this.addSlot(new DeskSlot(container, 0, 44, 36));
+		this.addSlot(new DeskSlot(container, 1, 62, 36));
 
 		for(int i = 0; i < 3; ++i) {
 			for(int j = 0; j < 9; ++j) {

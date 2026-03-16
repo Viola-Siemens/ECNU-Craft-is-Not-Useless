@@ -3,6 +3,7 @@ package org.ecnumc.ecnu.common.blocks.entities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.WorldlyContainer;
@@ -29,7 +30,7 @@ public class DeskBlockEntity extends BaseContainerBlockEntity implements Worldly
 
 	public static final int SLOT_BOOK = 2;
 
-	protected final NonNullList<ItemStack> items = NonNullList.withSize(SLOT_BOOK, ItemStack.EMPTY);
+	protected NonNullList<ItemStack> items = NonNullList.withSize(SLOT_BOOK, ItemStack.EMPTY);
 
 	public DeskBlockEntity(BlockPos pos, BlockState blockState) {
 		this(ECNUBlockEntities.DESK.get(), pos, blockState);
@@ -39,7 +40,18 @@ public class DeskBlockEntity extends BaseContainerBlockEntity implements Worldly
 		super(type, pos, blockState);
 	}
 
-	// TODO: 持久化
+	@Override
+	public void load(CompoundTag nbt) {
+		super.load(nbt);
+		this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+		ContainerHelper.loadAllItems(nbt, this.items);
+	}
+
+	@Override
+	protected void saveAdditional(CompoundTag nbt) {
+		super.saveAdditional(nbt);
+		ContainerHelper.saveAllItems(nbt, this.items);
+	}
 
 	@Override
 	protected Component getDefaultName() {
@@ -48,7 +60,7 @@ public class DeskBlockEntity extends BaseContainerBlockEntity implements Worldly
 
 	@Override
 	protected DeskMenu createMenu(int containerId, Inventory inventory) {
-		return new DeskMenu(containerId, inventory);
+		return new DeskMenu(containerId, inventory, this);
 	}
 
 	@Override
@@ -104,6 +116,10 @@ public class DeskBlockEntity extends BaseContainerBlockEntity implements Worldly
 
 	@Override
 	public boolean canPlaceItem(int slot, ItemStack stack) {
+		return mayPlace(stack);
+	}
+
+	public static boolean mayPlace(ItemStack stack) {
 		return stack.is(Items.BOOK) || stack.is(Items.WRITTEN_BOOK) || stack.is(Items.WRITABLE_BOOK) || stack.is(Items.ENCHANTED_BOOK);
 	}
 
